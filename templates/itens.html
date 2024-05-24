@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block title %}Itens{% endblock %}
+
+{% block content %}
+<div class="texto-main">
+    <h1 class="titulo">Itens</h1><hr>
+    <h4>Varas de Pesca</h4>
+    <p>Principal ferramenta utilizada na pesca. Pode acabar encontrando tesouros submersos.</p>
+    <div class="container-lista" id="lista-itens">
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item topico-lista flex-fill img-item">Imagem</li>
+            <li class="list-group-item topico-lista flex-fill">Nome</li>
+            <li class="list-group-item topico-lista flex-fill">Preço</li>
+            <li class="list-group-item topico-lista flex-fill">Vantagens</li>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item flex-fill img-item"><img src="{{ url_for('static', filename='images/itens/v_treino.png')}}" alt="v_treino"></li>
+            <li class="list-group-item flex-fill">Vara de treinamento</li>
+            <li class="list-group-item flex-fill" id="prc-padrao">Gratuito</li>
+            <li class="list-group-item flex-fill" id="prc-sub">0<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill">Nenhuma</li>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item flex-fill img-item"><img src="{{ url_for('static', filename='images/itens/v_bambu.png')}}" alt="v_bambu"></li>
+            <li class="list-group-item flex-fill">Vara de Bambu</li>
+            <li class="list-group-item flex-fill" id="prc-padrao">500 moedas<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill" id="prc-sub">500<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill">Facilita a pesca de peixes suaves.</li>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item flex-fill img-item"><img src="{{ url_for('static', filename='images/itens/v_fibra_vidro.png')}}" alt="v_fibra_vidro"></li>
+            <li class="list-group-item flex-fill">Vara de Fibra de Vidro</li>
+            <li class="list-group-item flex-fill" id="prc-padrao">1800 moedas<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill" id="prc-sub">1800<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill">Possibilita a pesca de peixes mais difíceis.</li>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item flex-fill img-item"><img src="{{ url_for('static', filename='images/itens/v_iridio.png')}}" alt="v_iridio"></li>
+            <li class="list-group-item flex-fill">Vara de Irídio</li>
+            <li class="list-group-item flex-fill" id="prc-padrao">7500 moedas<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill" id="prc-sub">7500<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill">Permite a pesca de qualquer tipo de peixe.</li>
+        </ul>
+    </div><hr>
+    <h4>Iscas</h4>
+    <p>Podem ser anexadas a uma Vara de Fibra de Vidro ou Irídio. Mas não são obrigatórias para a pesca. No entanto, utilizar iscas concederá efeitos que podem ajudar o jogador a pescar.</p>
+    <div class="container-lista" id="lista-itens">
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item topico-lista flex-fill img-item">Imagem</li>
+            <li class="list-group-item topico-lista flex-fill">Nome</li>
+            <li class="list-group-item topico-lista flex-fill">Preço</li>
+            <li class="list-group-item topico-lista flex-fill">Efeito</li>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item flex-fill img-item"><img src="{{ url_for('static', filename='images/itens/isca.png')}}" alt="isca"></li>
+            <li class="list-group-item flex-fill">Isca Comum</li>
+            <li class="list-group-item flex-fill" id="prc-padrao">5 moedas<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill" id="prc-sub">5<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill">Aumenta a chance de fisgar um peixe.</li>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item flex-fill img-item"><img src="{{ url_for('static', filename='images/itens/isca_slvg.png')}}" alt="isca_slvg"></li>
+            <li class="list-group-item flex-fill">Isca Selvagem</li>
+            <li class="list-group-item flex-fill" id="prc-padrao">25 moedas<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill" id="prc-sub">25<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill">Aumenta ainda mais a chance de fisgar um peixe.</li>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item flex-fill img-item"><img src="{{ url_for('static', filename='images/itens/isca_dlx.png')}}" alt="isca_dlx"></li>
+            <li class="list-group-item flex-fill">Isca de Luxo</li>
+            <li class="list-group-item flex-fill" id="prc-padrao">100 moedas<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill" id="prc-sub">100<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill">Maximiza as chances de fisgar um peixe. Impossibilita a probabilidade de encontrar lixo.</li>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item flex-fill img-item"><img src="{{ url_for('static', filename='images/itens/ima.png')}}" alt="ima"></li>
+            <li class="list-group-item flex-fill">Ímã</li>
+            <li class="list-group-item flex-fill" id="prc-padrao">1000 moedas<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill" id="prc-sub">1000<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill">Aumenta as chances de encontar tesouros submersos ao fisgar um peixe.</li>
+        </ul>
+    </div><hr>
+    <h4>Anzóis</h4>
+    <p>Podem ser anexados a uma Vara de Irídio para facilitar a pesca. É possível utilizar iscas e anzóis simultaneamente. Anzóis têm uma durabilidade limitada, e eventualmente se desgastam com o uso.
+    <div class="container-lista" id="lista-itens">
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item topico-lista flex-fill img-item">Imagem</li>
+            <li class="list-group-item topico-lista flex-fill">Nome</li>
+            <li class="list-group-item topico-lista flex-fill">Preço</li>
+            <li class="list-group-item topico-lista flex-fill">Efeito</li>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item flex-fill img-item"><img src="{{ url_for('static', filename='images/itens/anzol.png')}}" alt="anzol"></li>
+            <li class="list-group-item flex-fill">Anzol Comum</li>
+            <li class="list-group-item flex-fill" id="prc-padrao">500 moedas<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill" id="prc-sub">500<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill">Reduz o tempo necessário para fisgar um peixe.</li>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item flex-fill img-item"><img src="{{ url_for('static', filename='images/itens/anzol_artfc.png')}}" alt="anzol_artfc"></li>
+            <li class="list-group-item flex-fill">Anzol Melhorado</li>
+            <li class="list-group-item flex-fill" id="prc-padrao">1000 moedas<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill" id="prc-sub">1000<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill">Reduz ainda mais o tempo necessário para fisgar um peixe.</li>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item flex-fill img-item"><img src="{{ url_for('static', filename='images/itens/anzol_qld.png')}}" alt="anzol_qld"></li>
+            <li class="list-group-item flex-fill">Anzol de Qualidade</li>
+            <li class="list-group-item flex-fill" id="prc-padrao">1000 moedas<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill" id="prc-sub">1000<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill">Aumenta a qualidade dos peixes pescados.</li>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item flex-fill img-item"><img src="{{ url_for('static', filename='images/itens/anzol_curio.png')}}" alt="anzol_curio"></li>
+            <li class="list-group-item flex-fill">Anzol de Curiosidade</li>
+            <li class="list-group-item flex-fill" id="prc-padrao">500 moedas<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill" id="prc-sub">500<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill">Aumenta a chance de fisgar peixes raros.</li>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item flex-fill img-item"><img src="{{ url_for('static', filename='images/itens/anzol_tsr.png')}}" alt="anzol_tsr"></li>
+            <li class="list-group-item flex-fill">Anzol de Tesouro</li>
+            <li class="list-group-item flex-fill" id="prc-padrao">750 moedas<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill" id="prc-sub">750<img src="{{ url_for('static', filename='images/itens/moeda.png')}}" alt="moeda"></li>
+            <li class="list-group-item flex-fill">Aumenta as chances de encontar tesouros submersos.</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
