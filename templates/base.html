@@ -1,63 +1,71 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Base{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='normalize.css')}}">
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/baiacu.png')}}">
-  </head>
-  <body>
-    <!-- Header -->
-    <header>
-      <nav class="navbar navbar-expand-lg modelo-container">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-              <img src="{{ url_for('static', filename='images/baiacu.png')}}" alt="Logo_img" height = 50px style="margin-right: 10px;">
-              <img src="{{ url_for('static', filename='images/outros/logo.png')}}" alt="Logo_txt" height = 50px>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/">Início</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="/peixes">Peixes</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="/itens">Itens</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="/form">Feedback</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-    </header>
 
-      <!-- Conteúdo -->
-    <section>
-      <div class="main-conteudo">
-        {% block content %}
-        {% endblock %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Base{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='normalize.css')}}">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/baiacu.png')}}">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg modelo-container">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img src="{{ url_for('static', filename='images/baiacu.png')}}" alt="Logo_img" height=50px
+            style="margin-right: 10px;">
+          <img src="{{ url_for('static', filename='images/outros/logo.png')}}" alt="Logo_txt" height=50px>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/peixes">Peixes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/itens">Itens</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/form">Feedback</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/feedback">Comentários</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </section>
+    </nav>
+  </header>
 
-    <!-- Footer -->
-    <footer>
-      <div class="modelo-container footer">
+  <!-- Conteúdo -->
+  <section>
+    <div class="main-conteudo">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </section>
 
-        Todos os direitos reservados.<br>
-        Feito por: <img src="{{ url_for('static', filename='images/outros/willy.png') }}" alt="willy" height="40px">
-    
-      </div> 
-    </footer>
-    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+  <!-- Footer -->
+  <footer>
+    <div class="modelo-container footer">
+
+      Todos os direitos reservados.<br>
+      Feito por: <img src="{{ url_for('static', filename='images/outros/willy.png') }}" alt="willy" height="40px">
+
+    </div>
+  </footer>
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
 </body>
+
 </html>

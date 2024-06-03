@@ -30,7 +30,7 @@ body {
   min-height: 100vh;
 }
 
-.texto-main{
+.texto-main {
   margin: 0 15px;
   text-align: justify;
 }
@@ -75,7 +75,8 @@ body {
   margin-bottom: 15px;
 }
 
-#txt-sub, #prc-sub {
+#txt-sub,
+#prc-sub {
   display: none;
 }
 
@@ -83,9 +84,11 @@ body {
   #lista-peixes {
     width: 100% !important;
   }
+
   #txt-sub {
     display: flex;
   }
+
   #txt-padrao {
     display: none;
   }
@@ -104,32 +107,40 @@ body {
     margin: 15px;
     width: 90%;
   }
+
   .cards-locais {
     display: flex;
     flex-direction: column;
     margin: 10px;
   }
+
   .card {
     width: 100% !important;
     margin-bottom: 5px;
   }
+
   .img-estacao {
     display: none !important;
   }
+
   .txt-estacao {
     width: 75% !important;
   }
+
   .img-peixe {
     display: none !important;
   }
+
   #lista-peixes {
     font-size: 14px;
     width: 100% !important;
   }
+
   #lista-itens {
     font-size: 14px;
     width: 100% !important;
   }
+
   .img-item {
     display: none !important;
   }
@@ -142,9 +153,11 @@ body {
     margin-bottom: 15px;
     font-size: 14px;
   }
+
   .peixe-off {
     display: none !important;
   }
+
   #lista-peixes {
     font-size: 12px;
     width: 100% !important;
@@ -158,15 +171,19 @@ body {
     margin-bottom: 15px;
     font-size: 12px;
   }
+
   .peixe-off-2 {
     display: none !important;
   }
+
   #prc-padrao {
     display: none;
   }
+
   #prc-sub {
     display: flex;
   }
+
   #lista-itens {
     font-size: 12px;
   }
@@ -176,10 +193,44 @@ body {
   body {
     font-size: 30px;
   }
+
   h4 {
     font-size: 40px;
   }
+
   .accordion-button p {
     font-size: 30px !important;
   }
+}
+
+.div-form {
+  background-color: rgb(0, 145, 233);
+  width: 70%;
+  margin: 20px auto;
+  padding: 10px 10px 20px 20px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  color: white;
+  text-shadow: black 2px 2px 5px;
+}
+
+.item-fb {
+  border: 2px solid black;
+  margin: 10px 45px 10px 10px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  list-style-type: none;
+}
+
+.email-fb {
+  color: gray;
+  font-size: 14px;
 }

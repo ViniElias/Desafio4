@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Comentários{% endblock %}
+
+{% block content %}
+
+<div class="texto-main">
+  <h1 class="titulo">Comentários</h1>
+  <hr>
+
+  <ul>
+    {% for fb in feedback %}
+    <li class="item-fb">
+      <b>{{ fb[1] }}</b>
+      <p class="email-fb">Email: {{ fb[2] }}</p>
+      Comentário: {{ fb[3] }}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}

@@ -4,10 +4,20 @@
 
 {% block content %}
 <div class="texto-main">
-    <h1 class="titulo">Avalie-nos!</h1><hr>
-    <form action="">
-        <label for="name">Nome:</label>
-        <input type="text" name="nome">
-        <input type="submit" name="" value="Enviar">
-    </form>
-{% endblock %}
+    <div class="div-form">
+        <h1 class="titulo">Avalie-nos!</h1>
+        <hr>
+        <form action="/add" method="POST">
+            <label for="name">Nome:</label>
+            <input type="text" name="nome" required></p>
+
+            <label for="email">Email:</label>
+            <input type="text" name="email" required></p>
+
+            <label for="comentario">Deixe um comentário:</label><br>
+            <textarea name="comentario" cols="65" rows="3" maxlength="200" required></textarea>
+            <hr>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    {% endblock %}
