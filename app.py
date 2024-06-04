@@ -5,7 +5,7 @@ app = Flask("__name__")
 
 app.config["MYSQL_HOST"] = "localhost"
 app.config["MYSQL_USER"] = "root"
-app.config["MYSQL_PASSWORD"] = "vinielias1"
+app.config["MYSQL_PASSWORD"] = "fatec"
 app.config["MYSQL_DB"] = "stardew"
 mysql = MySQL(app)
 
@@ -33,17 +33,6 @@ def add_fb():
         mysql.connection.commit()
         cur.close()
         return redirect(url_for("feedback"))
-
-
-@app.route("/delete/<int:fb_id>", methods=["POST"])
-def delete_fb(fb_id):
-    if request.method == "POST":
-        cur = mysql.connection.cursor()
-        cur.execute("DELETE FROM feedback WHERE id=%s", (fb_id,))
-        mysql.connection.commit()
-        cur.close()
-        return redirect(url_for("feedback"))
-
 
 @app.route("/")
 def index():
